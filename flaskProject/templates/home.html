@@ -1,0 +1,12 @@
+{% if news_model %}
+  {% if news_model|length > 0 %}
+      <ul>
+          {% for key, item in news_model.items() %}
+              <li>{{ item }}</li>  {% endfor %}
+      </ul>
+  {% else %}
+      <p>No news model data available.</p>
+  {% endif %}
+{% else %}
+  <p>Failed to fetch news model data.</p>
+{% endif %}
